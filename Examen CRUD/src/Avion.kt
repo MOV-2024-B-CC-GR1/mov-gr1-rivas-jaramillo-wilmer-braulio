@@ -8,11 +8,3 @@ data class Avion(
     var enServicio: Boolean,
     val partes: MutableList<ParteAvion> = mutableListOf()
 )
-
-data class ParteAvion(
-    val nombre: String,
-    val numeroSerie: Int,
-    var precio: Double,
-    val fechaMantenimiento: Date,
-    var esEsencial: Boolean
-)
