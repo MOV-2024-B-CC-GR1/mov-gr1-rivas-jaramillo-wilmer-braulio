@@ -4,27 +4,37 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.Toast
 
 class AgregarAvionActivity : AppCompatActivity() {
+
+    private lateinit var databaseHelper: DatabaseHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_agregar_avion)
 
-        val etNombre: EditText = findViewById(R.id.etNombre)
+        databaseHelper = DatabaseHelper(this)
+
         val etModelo: EditText = findViewById(R.id.etModelo)
         val etFabricante: EditText = findViewById(R.id.etFabricante)
         val btnGuardar: Button = findViewById(R.id.btnGuardar)
 
         btnGuardar.setOnClickListener {
-            val nuevoAvion = Avion(
-                id = BaseDeDatos.aviones.size + 1,
-                modelo = etModelo.text.toString(),
-                fabricante = etFabricante.text.toString(),
-                anio = 2023
-            )
+            val modelo = etModelo.text.toString()
+            val fabricante = etFabricante.text.toString()
 
-            BaseDeDatos.agregarAvion(nuevoAvion)
-            finish()
+            if (modelo.isNotEmpty() && fabricante.isNotEmpty()) {
+                val exito = databaseHelper.insertarAvion(modelo, fabricante)
+                if (exito) {
+                    Toast.makeText(this, "Avión guardado", Toast.LENGTH_SHORT).show()
+                    finish()
+                } else {
+                    Toast.makeText(this, "Error al guardar", Toast.LENGTH_SHORT).show()
+                }
+            } else {
+                Toast.makeText(this, "Complete todos los campos", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
