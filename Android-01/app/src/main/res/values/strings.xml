@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">ccgr12024b_wbrj</string>
-
+    <string name="detalle_avion">Detalles del Avión</string>
+    <string name="modelo">Modelo:</string>
+    <string name="fabricante">Fabricante:</string>
+    <string name="latitud">Latitud:</string>
+    <string name="longitud">Longitud:</string>
 </resources>

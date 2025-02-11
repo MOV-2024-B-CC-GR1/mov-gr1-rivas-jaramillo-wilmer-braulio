@@ -2,9 +2,11 @@ package com.example.ccgr12024b_wbrj
 
 // Entidad Avion
 data class Avion(
-    val id: Int = 0,
+    val id: Int,
     val modelo: String,
-    val fabricante: String
+    val fabricante: String,
+    val latitud: Double,    // Nuevo campo
+    val longitud: Double    // Nuevo campo
 )
 
 // Entidad ParteAvion

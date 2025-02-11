@@ -1,0 +1,110 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalleAvionActivity">
+
+    <!-- Título -->
+
+    <!-- Modelo -->
+
+    <!-- Fabricante -->
+
+    <!-- Latitud -->
+
+    <!-- Longitud -->
+
+    <TextView
+        android:id="@+id/tvTitulo2"
+        android:layout_width="191dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/detalle_avion"
+        android:textColor="#404040"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvModelo"
+        android:layout_width="182dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/modelo"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo2" />
+
+    <TextView
+        android:id="@+id/tvFabricante"
+        android:layout_width="181dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/fabricante"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvModelo" />
+
+    <TextView
+        android:id="@+id/tvLongitud"
+        android:layout_width="181dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/longitud"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLatitud" />
+
+    <TextView
+        android:id="@+id/tvLatitud"
+        android:layout_width="180dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/latitud"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFabricante" />
+
+    <Button
+        android:id="@+id/btnEliminar"
+        android:layout_width="168dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="56dp"
+        android:padding="16dp"
+        android:text="Eliminar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLongitud" />
+
+    <Button
+        android:id="@+id/btnVerMapa"
+        android:layout_width="168dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="12dp"
+        android:padding="16dp"
+        android:text="Ver Mapa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnModificar" />
+
+    <Button
+        android:id="@+id/btnModificar"
+        android:layout_width="169dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="12dp"
+        android:padding="16dp"
+        android:text="Modificar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnEliminar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
