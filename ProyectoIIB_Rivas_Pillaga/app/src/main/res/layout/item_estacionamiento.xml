@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- Imagen del parqueadero -->
+    <ImageView
+        android:id="@+id/imgEstacionamiento"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/estacionamiento_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- Contenedor de datos -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/imgEstacionamiento"
+        app:layout_constraintTop_toTopOf="@id/imgEstacionamiento"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp">
+
+        <!-- Nombre del parqueadero -->
+        <TextView
+            android:id="@+id/tvNombreEstacionamiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parqueadero Central"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <!-- Ubicación -->
+        <TextView
+            android:id="@+id/tvUbicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dirección del parqueadero"
+            android:textSize="14sp"/>
+
+        <!-- Precio -->
+        <TextView
+            android:id="@+id/tvPrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$1.50 por hora"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_green_dark"/>
+
+        <!-- Contenedor de botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="8dp">
+
+            <!-- Botón "Solicitar" -->
+            <Button
+                android:id="@+id/btnSolicitarParqueadero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solicitar"
+                android:textSize="14sp"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Botón "Ver Mapa" -->
+            <Button
+                android:id="@+id/btnVerMapa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver Mapa"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
